@@ -6,6 +6,15 @@ const routes: Array<RouteRecordRaw> = [
     name: 'home',
     component: () => import('@/components/HelloWorld.vue') // 建议进行路由懒加载，优化访问性能
   },
+  {
+    path: '/register',
+    name: 'register',
+    meta: {
+      title: '',
+      icon: '',
+    },
+    component: () => import('@/components/register.vue'),
+  },
 ]
 
 const router = createRouter({

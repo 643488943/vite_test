@@ -1,11 +1,10 @@
 <template>
   <div class="text-center">
     <el-tooltip :content="$t('home')" placement="top">
-      <button class="icon-btn mx-2" to="/">
+      <button class="icon-btn mx-2" @click="router.push('/')">
         <i-mdi-home-search-outline class="icon-footer" />
       </button>
     </el-tooltip>
-
     <el-tooltip :content="isDark ? $t('change light') : $t('change dark')" placement="top">
       <button class="icon-btn mx-2 !outline-none" @click="toggleDark()">
         <i-ph-cloud-moon-bold v-if="isDark" class="icon-footer" />
@@ -25,8 +24,9 @@
 import { isDark, toggleDark } from '@/utils/dark'
 import{ useI18n }from 'vue-i18n'
 const { locale } = useI18n()
+const router = useRouter()
 const toggleLocales = () => {
-  locale.value = locale.value == 'zh' ? 'en' : 'zh'
+  locale.value = locale.value === 'zh' ? 'en' : 'zh'
 }
 </script>
 

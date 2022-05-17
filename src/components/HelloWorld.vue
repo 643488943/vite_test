@@ -12,7 +12,7 @@
         <el-button type="primary" class="font-sans font-bold" round @click="handleRegister">{{
           $t('register')
         }}</el-button>
-        <el-button type="primary" class="font-sans font-bold" round @click="handleLogin">{{ $t('login') }}</el-button>
+        <el-button type="primary" class="font-sans font-bold" round @click="$router.push('register')">{{ $t('login') }}</el-button>
       </center>
         </div>
   </div>
