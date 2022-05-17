@@ -1,5 +1,6 @@
 /* eslint-disable new-cap */
 import { defineConfig } from 'vite'
+import WindiCSS from 'vite-plugin-windicss'
 import Icons from 'unplugin-icons/vite'
 import svgLoader from 'vite-svg-loader'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -10,6 +11,7 @@ import Components from 'unplugin-vue-components/vite'
 import { VueUseComponentsResolver, ElementPlusResolver, AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 export default defineConfig({
   plugins: [vue(),
+    WindiCSS(),
     svgLoader(),
     AutoImport({
       dts: './src/auto-imports.d.ts',
