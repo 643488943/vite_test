@@ -1,8 +1,10 @@
-module.exports = {
+import { defineConfig } from 'windicss/helpers'
+import formsPlugin from 'windicss/plugin/forms'
+
+export default defineConfig( {
   content: [],
-  mode: 'jit',
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: { extend: {} },
   plugins: [],
   variants: {
@@ -11,4 +13,4 @@ module.exports = {
       backgroundColor: ['dark'],
     }
   }
-}
+})

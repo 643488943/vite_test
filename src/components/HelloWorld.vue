@@ -1,10 +1,9 @@
 <template>
   <div class="log-container max-w-3xl mx-auto rounded-4xl">
-    <div class="log-form mx-auto rounded-4xl">
+    <div class="log-form mx-auto rounded-4xl ">
       <h1 class="font-sans font-bold text-4xl log-title">{{ $t('welcome login') }}</h1>
       <label class="font-sans font-bold"
-        >{{ $t('account') }}<el-input v-model="account" label="account" type="text" clearable /></label
-      ><br />
+        >{{ $t('account')}}<el-input v-model="account" label="account" type="text" clearable /></label><br />
       <label class="font-sans font-bold"
         >{{ $t('password') }}<el-input v-model="password" type="password" class="pb-3" clearable show-password
       /></label>
@@ -38,6 +37,11 @@ const handleLogin = () => {
 
 </script>
 <style lang="scss" scoped>
+@media screen and (max-width:600px){
+  .el-input{
+    float: center;
+  }
+}
 .log-container {
   display: block;
   height: 50vh;
@@ -67,12 +71,11 @@ const handleLogin = () => {
       margin: 1.5% auto;
       text-align: center;
       .el-input {
-        width: 80%;
-        float: center;
+        float: right;
         margin-left: 2%;
-        margin-right: 2%;
+      }
       }
     }
   }
-}
+
 </style>
