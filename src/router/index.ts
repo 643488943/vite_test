@@ -3,8 +3,12 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: () => import('@/components/HelloWorld.vue') // 建议进行路由懒加载，优化访问性能
+    name: 'login',
+    component: () => import('@/components/Login.vue'),
+    meta: {
+      title: '',
+      icon: '',
+    }, // 建议进行路由懒加载，优化访问性能
   },
   {
     path: '/register',

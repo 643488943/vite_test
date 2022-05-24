@@ -28,6 +28,7 @@ module.exports = {
     'no-extra-parens': 'error', // 禁止不必要的括号
     // "no-console": "error" // 不允许打印console.log
     'no-template-curly-in-string': 'error', // 禁止在常规字符串中出现模板字符串语法${xxx}
+    'vue/multi-word-component-names': 'off', // 关闭驼峰命名规则
     // --以下是Best Practices 最佳实践
     'default-case': 'error', // 强制switch要有default分支
     'dot-location': ['error', 'property'], // 要求对象的点要跟属性同一行

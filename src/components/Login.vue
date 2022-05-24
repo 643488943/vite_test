@@ -8,11 +8,11 @@
         >{{ $t('password') }}<el-input v-model="password" type="password" class="pb-3" clearable show-password
       /></label>
       <center>
-        <el-button type="primary" class="font-sans font-bold" round @click="handleRegister">{{
-          $t('register')
-        }}</el-button>
-        <el-button type="primary" class="font-sans font-bold" round @click="$router.push('register')">{{ $t('login') }}</el-button>
+        <el-button type="primary" class="font-sans font-bold" round >{{ $t('login') }}</el-button>
       </center>
+          <el-link :underline="false"  class="font-sans font-bold " @click="$router.push('register')">{{
+          $t('no account')
+        }}</el-link>
         </div>
   </div>
 </template>
@@ -23,29 +23,15 @@ import { ref, defineComponent } from 'vue'
 const account = ref('')
 const password = ref('')
 const router = useRouter()
-const route = useRoute()
-const handleRegister = () => {
-  router.push({ name: 'register' })
-}
-const handleLogin = () => {
-  router.push({
-    name: 'hello',
-    query: {},
-  })
-}
 
 
 </script>
 <style lang="scss" scoped>
-@media screen and (max-width:600px){
-  .el-input{
-    float: center;
-  }
-}
+
 .log-container {
   display: block;
   height: 50vh;
-  width: 50vm;
+  width: 80vm;
   overflow: hidden;
   padding: 10vm;
   margin-top: 25vh;
@@ -63,7 +49,7 @@ const handleLogin = () => {
     text-align: center;
     .log-title {
       overflow: hidden;
-      margin: 3% auto 1.5% auto;
+      margin: auto;
     }
     label {
       display: inline-block;

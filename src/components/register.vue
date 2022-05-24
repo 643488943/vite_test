@@ -1,3 +1,72 @@
+
 <template>
-<a-button>11111</a-button>
+  <div class="log-container max-w-3xl mx-auto rounded-4xl">
+    <div class="log-form mx-auto rounded-4xl ">
+      <h1 class="font-sans font-bold text-4xl log-title">{{ $t('welcome register') }}</h1>
+      <label class="font-sans font-bold"
+        >{{ $t('input account')}}<el-input v-model="account" label="account" type="text" clearable /></label><br />
+      <label class="font-sans font-bold"
+        >{{ $t('input password') }}<el-input v-model="password" type="password"  clearable show-password
+      /></label><br/>
+        <label class="font-sans font-bold"
+        >{{ $t('twice password') }}<el-input v-model="password" type="password" class="pb-1" clearable show-password
+      /></label>
+      <center>
+        <el-button type="primary" class="font-sans font-bold" round >{{
+          $t('register')
+        }}</el-button>
+      </center>
+        <el-link :underline="false"  @click="$router.push('/')">{{ $t('have accont') }}</el-link>
+        </div>
+  </div>
 </template>
+
+<script lang="ts" setup>
+import { ref, defineComponent } from 'vue'
+
+const account = ref('')
+const password = ref('')
+const router = useRouter()
+const route = useRoute()
+
+
+</script>
+<style lang="scss" scoped>
+
+.log-container {
+  display: block;
+  height: 50vh;
+  width: 80vm;
+  overflow: hidden;
+  padding: 10vm;
+  margin-top: 25vh;
+  position: relative;
+  border-radius: 80px;
+  box-shadow: 5px 5px 13px #8a8a8a, -5px -5px 13px #ffffff;
+
+  .log-form {
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .log-title {
+      overflow: hidden;
+      margin: 1.5% auto 1.5% auto;
+    }
+    label {
+      display: inline-block;
+      min-width: 100%;
+      margin: 1.5% auto;
+      text-align: center;
+      .el-input {
+        float: right;
+        margin-left: 2%;
+      }
+      }
+    }
+  }
+
+</style>

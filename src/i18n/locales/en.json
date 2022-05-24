@@ -13,8 +13,14 @@
   "welcome login": "Welcome",
   "please input accont": "Please input accont",
   "please input password": "Please input password",
-  "account": " account  ",
+  "account": "account",
   "password": "password",
   "login": "login",
-  "register": "register"
+  "register": "register",
+  "welcome register": "Welcome register",
+  "input account": "Please input account",
+  "input password": "Please input password",
+  "twice password": "Please input password again",
+  "have accont": "Have account? Go to login",
+  "no account": "Don't have accont? Go to register"
 }

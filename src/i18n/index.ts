@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
-import zh from './zh-CN'
-import en from './en-US'
+import zh from './locales/zh-CN.json'
+import en from './locales/en.json'
 // src/i18n/index.js
 const messages = {
   en,
@@ -12,7 +12,7 @@ const messages = {
 const i18n = createI18n({
   globalInjection: true,
   legacy: false,
-  locale: localStorage.getItem('language') || 'zh_CN',
+  locale: localStorage.getItem('language') || 'zh',
   messages,
 })
 export default i18n
